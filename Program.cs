@@ -6,7 +6,11 @@ namespace GuessingGame
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.Write("Guess a friggen number: ");
+            string userResponse = Console.ReadLine();
+            int guess = int.Parse(userResponse);
+
+            Console.WriteLine(guess);
         }
     }
 }
