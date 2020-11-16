@@ -6,19 +6,26 @@ namespace GuessingGame
     {
         static void Main(string[] args)
         {
-            Console.Write("Guess a friggen number: ");
-            string userResponse = Console.ReadLine();
-            int guess = int.Parse(userResponse);
 
             int secretNumber = 42;
+            int numberOfAttempts = 0;
 
-            if (guess == secretNumber)
+            while (numberOfAttempts < 4)
             {
-                Console.WriteLine("Ya! You guessed it!");
-            }
-            else
-            {
-                Console.WriteLine("Nope that wasn't it...");
+                Console.Write("Guess a friggen number: ");
+                string userResponse = Console.ReadLine();
+                int guess = int.Parse(userResponse);
+
+                if (guess == secretNumber)
+                {
+                    Console.WriteLine("Ya! You guessed it!");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Nope that wasn't it...");
+                    numberOfAttempts++;
+                }
             }
         }
     }
