@@ -10,7 +10,16 @@ namespace GuessingGame
             string userResponse = Console.ReadLine();
             int guess = int.Parse(userResponse);
 
-            Console.WriteLine(guess);
+            int secretNumber = 42;
+
+            if (guess == secretNumber)
+            {
+                Console.WriteLine("Ya! You guessed it!");
+            }
+            else
+            {
+                Console.WriteLine("Nope that wasn't it...");
+            }
         }
     }
 }
